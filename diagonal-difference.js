@@ -24,7 +24,7 @@ function diagonalDifference(arr) {
 
     let result = rightToLeft - leftToRight;
     console.log(result)
-    return result;
+    return Math.abs(result);
 }
 
 diagonalDifference(arr)
