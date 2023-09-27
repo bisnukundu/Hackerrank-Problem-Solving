@@ -39,20 +39,17 @@ function gradingStudents(grades) {
         let minimunGrade = 38
 
         if (grade > makeRoundGrade && grade >= minimunGrade && !isZero && !isFive) {
-
-            roundGrade = Number(String(grade)[0]) * 10 + 10
-
+            roundGrade = makeRoundGrade + 5
             if ((roundGrade - grade) < 3) {
-                roundGrade = Number(String(grade)[0]) * 10 + 10
+                roundGrade = makeRoundGrade + 5
             } else {
                 roundGrade = grade
             }
 
         } else if (grade < makeRoundGrade && grade >= minimunGrade && !isZero && !isFive) {
-            roundGrade = Number(String(grade)[0]) * 10 + 5
-
+            roundGrade = makeRoundGrade
             if ((roundGrade - grade) < 3) {
-                roundGrade = Number(String(grade)[0]) * 10 + 5
+                roundGrade = makeRoundGrade
             } else {
                 roundGrade = grade
             }
